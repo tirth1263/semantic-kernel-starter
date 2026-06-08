@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Semantic Kernel Starter is a minimal Python ChatCompletionAgent starter powered by Nebius Token Factory with streaming and automatic function calling."
+    />
+    <title>Semantic Kernel Starter</title>
+    <link rel="preload" href="assets/hero.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Semantic Kernel Starter home">
+        <span class="brand-mark">SK</span>
+        <span>Semantic Kernel Starter</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#quickstart">Quickstart</a>
+        <a href="#architecture">Architecture</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Semantic Kernel Starter overview">
+        <img src="assets/hero.png" alt="" class="hero-image" />
+        <div class="hero-scrim"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Python agent starter</p>
+          <h1>Semantic Kernel Starter</h1>
+          <p class="hero-copy">
+            A compact, production-minded starter for building a streaming
+            ChatCompletionAgent with custom plugins and Nebius Token Factory.
+          </p>
+          <div class="hero-actions" aria-label="Project links">
+            <a class="button primary" href="https://github.com/tirth1263/semantic-kernel-starter">
+              <i data-lucide="github" aria-hidden="true"></i>
+              GitHub
+            </a>
+            <a class="button secondary" href="#quickstart">
+              <i data-lucide="terminal" aria-hidden="true"></i>
+              Quickstart
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature-strip" id="features">
+        <div class="section-heading">
+          <p class="eyebrow">What it includes</p>
+          <h2>Everything needed to test an agentic Semantic Kernel flow.</h2>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <i data-lucide="message-square-text" aria-hidden="true"></i>
+            <h3>Streaming Agent</h3>
+            <p>Uses ChatCompletionAgent with streamed responses for a responsive CLI experience.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="plug-zap" aria-hidden="true"></i>
+            <h3>Custom Plugin</h3>
+            <p>Includes a TimePlugin that demonstrates the @kernel_function decorator.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="route" aria-hidden="true"></i>
+            <h3>Tool Calling</h3>
+            <p>Enables automatic function choice so the model decides when to call tools.</p>
+          </article>
+          <article class="feature-card">
+            <i data-lucide="cloud" aria-hidden="true"></i>
+            <h3>Nebius Ready</h3>
+            <p>Connects through Semantic Kernel's OpenAI-compatible service path.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section quickstart" id="quickstart">
+        <div class="section-heading">
+          <p class="eyebrow">Run it</p>
+          <h2>Clone, configure, and start chatting.</h2>
+        </div>
+        <div class="terminal-grid">
+          <div class="terminal-block">
+            <div class="terminal-title">
+              <i data-lucide="download" aria-hidden="true"></i>
+              Installation
+            </div>
+            <pre><code>git clone https://github.com/tirth1263/semantic-kernel-starter.git
+cd semantic-kernel-starter
+
+pip install -r requirements.txt</code></pre>
+          </div>
+          <div class="terminal-block">
+            <div class="terminal-title">
+              <i data-lucide="key-round" aria-hidden="true"></i>
+              Environment
+            </div>
+            <pre><code>cp .env.example .env
+# set NEBIUS_API_KEY
+
+python main.py</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="section architecture" id="architecture">
+        <div class="architecture-copy">
+          <p class="eyebrow">How it works</p>
+          <h2>One kernel, one agent, one useful plugin.</h2>
+          <p>
+            The app builds a Semantic Kernel, registers an OpenAI-compatible
+            Nebius chat service, adds the TimePlugin, and gives the agent
+            automatic function-calling settings. When the user asks for the
+            current time, the model can call <code>time.now</code> instead of guessing.
+          </p>
+        </div>
+        <div class="flow" aria-label="Architecture flow">
+          <div class="flow-node">User prompt</div>
+          <div class="flow-line"></div>
+          <div class="flow-node accent">ChatCompletionAgent</div>
+          <div class="flow-line"></div>
+          <div class="flow-node">Nebius Token Factory</div>
+          <div class="flow-line"></div>
+          <div class="flow-node success">time.now plugin</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Semantic Kernel Starter</span>
+      <span>Built for Python 3.10+ and Semantic Kernel 1.x</span>
+      <span id="year"></span>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
