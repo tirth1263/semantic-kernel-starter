@@ -13,7 +13,7 @@ useful version of an LLM agent that can decide when to call a tool.
 
 ## Live Website
 
-The project website will be published after deployment.
+[View the published website](https://tirth1263.github.io/semantic-kernel-starter/)
 
 ## Why This Starter Exists
 
